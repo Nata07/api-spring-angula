@@ -1,0 +1,49 @@
+{{oportunidade | json}}
+
+<p-panel header="Nova Oportunidade">
+    <div class="conteudo p-grid">
+        <div class="p-col-10">
+            <span class="ui-float-label">
+                <input id="float-input" type="text" size="30" pInputText [(ngModel)]="oportunidade.empresa"> 
+                <label for="float-input">Empresa: </label>
+            </span>
+        </div>
+        <div class="p-col-10">
+            <span class="ui-float-label">
+                <input id="float-input" type="text" size="30" pInputText [(ngModel)]="oportunidade.descricao"> 
+                <label for="float-input">Descrição: </label>
+            </span>
+        </div>
+        <div class="p-col-10">
+            <span class="ui-float-label">
+                <input id="float-input" type="text" size="30" pInputText [(ngModel)]="oportunidade.valor"> 
+                <label for="float-input">Valor: </label>
+            </span>
+        </div>
+        <div class="p-col-10">
+            <button pButton type="button" p-offset="2" label="Salvar" (click)="salvar()"></button>
+        </div>
+    </div>
+</p-panel>
+
+<br/>
+<p-table [value]="oportunidades">
+    <ng-template pTemplate="header">
+        <tr>
+            <th>Código</th>
+            <th>Empresa</th>
+            <th>Descrição</th>
+            <th>Valor</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-op>
+        <tr>
+            <td>{{op.codigo}}</td>
+            <td>{{op.empresa}}</td>
+            <td>{{op.descricao}}</td>
+            <td>{{op.valor}}</td>
+        </tr>
+    </ng-template>
+</p-table>
+
+<p-toast></p-toast>

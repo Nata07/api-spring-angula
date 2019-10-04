@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: br.com.nsystem.comercialapi.ComercialApiApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.584 s - in br.com.nsystem.comercialapi.ComercialApiApplicationTests
